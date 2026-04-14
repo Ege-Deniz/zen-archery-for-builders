@@ -12,6 +12,25 @@ This file is *Zen in the Art of Archery* reframed as ten rules for working with 
 
 I don't know if any of this will make you a better developer. It made me a better archer. The overlap is more than metaphor.
 
+## The practical case (token efficiency)
+
+People complain about Claude token costs. Most waste doesn't come from the model — it comes from the archer.
+
+Mid-stream corrections, over-specified prompts that collapse the output range, carrying bad context from a failed session into a fresh one, interrupting a response to "clarify" — these are all kyūdō errors. Gripping too hard. Jerky release. No shoshin.
+
+Each principle in this file targets a specific source of prompt waste:
+
+| Principle | What it eliminates |
+|-----------|-------------------|
+| It shoots, I do not shoot | Mid-stream interruptions |
+| Right breath before right shot | Dirty context → garbage output cycles |
+| The target teaches, not the archer | Re-prompting a broken setup instead of fixing the setup |
+| The bowstring cuts those who grip too hard | Over-specified prompts that need 4 correction rounds |
+| The pause at full draw | Cancelling responses before they finish |
+| Non-attachment to the hit | Expecting first-pass perfection and spinning when you don't get it |
+
+Fix the form. The token count follows.
+
 ## Install
 
 ```bash
