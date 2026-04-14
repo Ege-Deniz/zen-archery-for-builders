@@ -132,4 +132,4 @@ Kenzō Awa, Herrigel's teacher, was said to have shot a target in the night — 
 - Every kyūdō teacher who has ever said *it shoots* and meant it.
 - Format inspired by [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills) and [`Ege-Deniz/three-skills-for-claude`](https://github.com/Ege-Deniz/three-skills-for-claude).
 
-Distilled by [@Ege-Deniz](https://github.com/Ege-Deniz), former national archer for Turkey, now a builder. If this file changes how you work with AI, tell me.
+Distilled by [@Ege-Deniz](https://github.com/Ege-Deniz), competitive archer from Northern Cyprus, now a builder. If this file changes how you work with AI, tell me.

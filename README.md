@@ -2,7 +2,7 @@
 
 > *Zen in the Art of Archery* (Eugen Herrigel, 1948), reframed as a `CLAUDE.md` for working with AI.
 
-I was a national archer for Turkey before I wrote a line of code.
+I grew up shooting competitive archery before I wrote code.
 
 In kyūdō — Japanese archery — there is a saying: **it shoots**. Not *I shoot*. When the archer's form is right, the arrow releases itself. The archer's job is not to hit the target. It is to disappear from the shot.
 
@@ -61,6 +61,6 @@ MIT — see [LICENSE](./LICENSE).
 
 [@Ege-Deniz](https://github.com/Ege-Deniz) · [rowy.engineer](https://rowy.engineer)
 
-Former national archer for Turkey. Now a builder.
+Competitive archer from Northern Cyprus. Now a builder. Written with Claude Code.
 
 Format inspired by [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills). Sister repo: [`Ege-Deniz/three-skills-for-claude`](https://github.com/Ege-Deniz/three-skills-for-claude).
