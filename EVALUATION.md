@@ -60,6 +60,8 @@ Avoid:
 | tighten README claims and add observable signals | zen-archery (pilot) | Codex GPT-5.4 + manual review | 1 | 0 | yes: README and evaluation language narrowed | yes | stronger promise, less overclaiming, added "How to know it's working" |
 | separate AGENTS.md from CLAUDE.md and make the skill operational | zen-archery (pilot) | External review + Codex follow-up | 1 | 1 | yes: agent/runtime guidance became operational instead of duplicative | yes | file roles became clearer, repo felt less like the same idea repeated |
 | validate plugin package and fix skill frontmatter parsing | zen-archery (pilot) | Claude CLI validate + Codex GPT-5.4 | 1 | 0 | yes: quoted skill description, validation now passes | yes | found a real packaging bug that prose review alone did not catch |
+| draft LinkedIn launch post for zen-archery-for-builders | zen-archery (pilot) | Claude Code + Sonnet 4.6 | 1 | 0 | yes: load skill context before writing became a durable rule in the brain's execution layer | yes | loaded article-writing playbook before drafting; clean scoped brief; complete post in one pass with zero correction loop |
+| 6-file brain infrastructure upgrade across multiple interdependent skill files and wiki pages | zen-archery (pilot) | Claude Code + Sonnet 4.6 | 7 | 0 | yes: Gate Clearance protocol documented as mandatory pre-write sub-step | yes | multi-file refactor with zero mid-session corrections; reading files before editing and stating intent per file prevented drift across all 7 operations |
 
 ## Blank scorecard template
 
