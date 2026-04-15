@@ -2,7 +2,7 @@
 
 > A CLAUDE.md distilled from *Zen in the Art of Archery* (Eugen Herrigel, 1948), reframed as rules for working with AI.
 
-Ten principles from kyūdō — Japanese archery — applied to AI-assisted building. Load this file as a `CLAUDE.md` (project-level or global) and Claude Code will follow the mindset of a disciplined archer: clean form over brute effort, right conditions over hard aim, non-attachment to the first shot.
+Ten principles from kyūdō — Japanese archery — applied to AI-assisted building. Load this file as a `CLAUDE.md` (project-level or global) to set the working discipline for your sessions: clean form over brute effort, right conditions over hard aim, non-attachment to the first shot.
 
 The book has its critics — Shoji Yamada's 2001 essay argues Herrigel romanticized his teacher's practice. Fair. The historical claims may be shaky; the mechanics of a good shot are not. These translate cleanly to the mechanics of a good prompt.
 
@@ -130,6 +130,6 @@ Kenzō Awa, Herrigel's teacher, was said to have shot a target in the night — 
 - *Zen in the Art of Archery*, Eugen Herrigel, 1948 (English: 1953). The original source.
 - "Shots in the Dark: Japan, Zen, and the West", Shoji Yamada, 2009. The critical counter-reading.
 - Every kyūdō teacher who has ever said *it shoots* and meant it.
-- Format inspired by [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills) and [`Ege-Deniz/three-skills-for-claude`](https://github.com/Ege-Deniz/three-skills-for-claude).
+- [`Ege-Deniz/three-skills-for-claude`](https://github.com/Ege-Deniz/three-skills-for-claude).
 
 Distilled by [@Ege-Deniz](https://github.com/Ege-Deniz), competitive archer from Northern Cyprus, now a builder. If this file changes how you work with AI, tell me.

@@ -1,0 +1,23 @@
+{
+  "name": "zen-archery",
+  "version": "0.1.0",
+  "description": "Kyudo-inspired Claude Code skill for disciplined AI-assisted building: clean context, light grip, better form, less waste.",
+  "author": {
+    "name": "Ege Deniz",
+    "url": "https://github.com/Ege-Deniz"
+  },
+  "homepage": "https://github.com/Ege-Deniz/zen-archery-for-builders",
+  "repository": "https://github.com/Ege-Deniz/zen-archery-for-builders",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "skill",
+    "prompting",
+    "workflow",
+    "zen",
+    "kyudo",
+    "ai"
+  ],
+  "skills": ["./skills/"]
+}

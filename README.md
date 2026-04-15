@@ -1,45 +1,54 @@
 # zen-archery-for-builders
 
-> *Zen in the Art of Archery* (Eugen Herrigel, 1948), reframed as a `CLAUDE.md` for working with AI.
+> You keep making the same corrections every session. This file helps you stop.
+
+`Zen in the Art of Archery` (Eugen Herrigel, 1948), reframed as a workflow discipline for AI-assisted building.
 
 I grew up as a competitive archer before I wrote code.
 
-In kyūdō — Japanese archery — there is a saying: **it shoots**. Not *I shoot*. When the archer's form is right, the arrow releases itself. The archer's job is not to hit the target. It is to disappear from the shot.
+In kyudo there is a saying: **it shoots**. Not *I shoot*. When the archer's form is right, the arrow releases itself. The archer's job is not to force the shot. It is to establish the conditions and get out of the way.
 
-I stopped competing years ago. Then I started working with Claude Code every day, and I realized I was fighting the tool the same way beginner archers fight the bow — gripping too tight, aiming too hard, correcting mid-shot, bruising my own forearm with the string.
+That maps surprisingly well to AI-assisted work. A lot of wasted time does not come from weak models. It comes from bad setup: stale context, panicked mid-stream corrections, prompts bloated with five layers of patchwork instructions, and repeated fixes that never become durable rules.
 
-This file is *Zen in the Art of Archery* reframed as ten rules for working with AI. The book has its critics — Shoji Yamada has argued Herrigel romanticized his teacher Kenzō Awa's practice, and the history is fair game. The mechanics of a good shot, though, are not up for debate. And they translate cleanly to the mechanics of a good prompt.
+This repo turns that discipline into a reusable `CLAUDE.md`, a Claude plugin, and a set of agent-facing instructions.
 
-I don't know if any of this will make you a better developer. It made me a better archer. The overlap is more than metaphor.
+## What this is
 
-## The practical case (token efficiency)
+A workflow discipline layer for builders who:
 
-People complain about Claude token costs. Most waste doesn't come from the model — it comes from the archer.
+- repeat the same corrections across sessions
+- keep poisoning clean tasks with dirty context
+- over-specify prompts until outputs get brittle
+- want a calmer, cleaner way to work without pretending every workflow should be minimal
 
-Mid-stream corrections, over-specified prompts that collapse the output range, carrying bad context from a failed session into a fresh one, interrupting a response to "clarify" — these are all kyūdō errors. Gripping too hard. Jerky release. No shoshin.
+## What this is not
 
-Each principle in this file targets a specific source of prompt waste:
+- a universal performance booster
+- a guarantee of lower token cost
+- a replacement for project-specific rules
+- a reason to remove necessary constraints from precision-heavy workflows
 
-| Principle | What it eliminates |
-|-----------|-------------------|
-| It shoots, I do not shoot | Mid-stream interruptions |
-| Right breath before right shot | Dirty context → garbage output cycles |
-| The target teaches, not the archer | Re-prompting a broken setup instead of fixing the setup |
-| The bowstring cuts those who grip too hard | Over-specified prompts that need 4 correction rounds |
-| The pause at full draw | Cancelling responses before they finish |
-| Non-attachment to the hit | Expecting first-pass perfection and spinning when you don't get it |
+If your team already has a strong ruleset, compliance gates, or highly specific formatting constraints, you may need more structure than "light grip" suggests. The wrong use of this repo is stripping away necessary instructions and calling it simplicity.
 
-Fix the form. The token count follows.
+## Who should use it
 
-## Install
+Use it if your main problem is workflow quality:
 
-```bash
-# Project-level — applies only to the current repo
-curl -o CLAUDE.md https://raw.githubusercontent.com/Ege-Deniz/zen-archery-for-builders/main/CLAUDE.md
+- too many corrective follow-ups
+- too much stale context
+- long prompts that still miss the point
+- repeated mistakes that should have become durable rules
 
-# Or global — applies to every Claude Code session
-curl -o ~/.claude/CLAUDE.md https://raw.githubusercontent.com/Ege-Deniz/zen-archery-for-builders/main/CLAUDE.md
-```
+Do not use it because the story sounds good. Use it if the pattern matches your real friction.
+
+## Who should not
+
+This repo may be a poor fit when:
+
+- the task is precision-heavy and every constraint really does need to be explicit
+- your team already has a very strong project-specific ruleset
+- the metaphor encourages people to remove necessary instructions
+- you want a benchmarked optimization tool rather than a workflow discipline
 
 ## The ten principles
 
@@ -51,26 +60,103 @@ curl -o ~/.claude/CLAUDE.md https://raw.githubusercontent.com/Ege-Deniz/zen-arch
 6. **The pause at full draw** — let the response finish.
 7. **A thousand identical shots** — form emerges from practice, not theory.
 8. **Non-attachment to the hit** — iteration is the mechanism.
-9. **Beginner's mind, every shot** — *shoshin*. Start each session clean.
+9. **Beginner's mind, every shot** — shoshin. Start each session clean.
 10. **The master shoots in the dark** — trust the scaffolding you built.
 
-Each principle comes with a concrete Claude Code rule and a "in practice" checklist in [`CLAUDE.md`](./CLAUDE.md).
+Each principle comes with a concrete rule and an "in practice" checklist in [`CLAUDE.md`](./CLAUDE.md). Practical before/after setups live in [`EXAMPLES.md`](./EXAMPLES.md).
+
+## How to know it's working
+
+These principles are working if you notice:
+
+- **fewer corrective follow-ups** — you stop saying "no, not like that" and start fixing the setup instead
+- **shorter prompts with the same or better outcomes** — constraints move into `CLAUDE.md`, not into every message
+- **proactive session restarts** — you restart when context is dirty, instead of layering corrections
+- **repeated corrections becoming durable rules** — frictions you hit twice get codified, not re-typed
+- **calmer sessions** — less gripping, less interrupting, less arguing with outputs
+
+If none of these happen after a week of real use, the repo is not helping your workflow. Narrow it or stop using it.
+
+## What is actually backed up
+
+The strongest backing is not the metaphor. It is Claude's own documentation:
+
+- Claude Code supports durable project and user memory through `CLAUDE.md`, which is exactly where repeated corrections should move: [Manage Claude's memory](https://code.claude.com/docs/en/memory)
+- Anthropic recommends clear structure, examples, and explicit organization for better prompt reliability: [Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices#structure-prompts-with-xml-tags)
+- Anthropic's Claude Code docs say token costs scale with context size, stale context wastes tokens, and better structure can reduce unnecessary exploration: [Manage costs effectively](https://code.claude.com/docs/en/costs)
+- Anthropic also warns that more prompt complexity can degrade performance, especially in cost-sensitive cases: [Reduce prompt leak](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-prompt-leak), [Prompting tools](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-tools)
+
+So the honest position is:
+
+- reusable structured instructions are backed up
+- cleaner context management is backed up
+- examples and durable rules are backed up
+- this specific kyudo framing is a memorable wrapper, not a proven scientific result
+
+## How to evaluate it
+
+Do not trust the story alone. Run it against real work.
+
+- evaluation guide: [`EVALUATION.md`](./EVALUATION.md)
+- initial author-side pilot rows are included there; proper baseline-vs-zen comparisons are still pending
+- use 5 to 20 real tasks, not toy prompts
+- compare baseline vs zen-archery
+- track turns, corrections, and whether the result was acceptable
+
+If it does not reduce wasted corrections, does not improve setup discipline, or actively hurts precision in your workflow, narrow the file or stop using it.
+
+## Install as `CLAUDE.md`
+
+```bash
+# Project-level — applies only to the current repo
+curl -o CLAUDE.md https://raw.githubusercontent.com/Ege-Deniz/zen-archery-for-builders/main/CLAUDE.md
+
+# Or global — applies to every Claude Code session
+curl -o ~/.claude/CLAUDE.md https://raw.githubusercontent.com/Ege-Deniz/zen-archery-for-builders/main/CLAUDE.md
+```
+
+## Use as a Claude plugin
+
+This repo also includes a Claude plugin package:
+
+- manifest: [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json)
+- skill: [`skills/principles/SKILL.md`](./skills/principles/SKILL.md)
+
+For local testing:
+
+```bash
+claude --plugin-dir /path/to/zen-archery-for-builders
+```
+
+Then invoke:
+
+```text
+/zen-archery:principles
+```
+
+## Use with Codex and other agents
+
+This repo is not Claude-only in structure.
+
+- runtime-facing instructions: [`AGENTS.md`](./AGENTS.md)
+- Codex install note: [`.codex/INSTALL.md`](./.codex/INSTALL.md)
+- Codex usage guide: [`docs/README.codex.md`](./docs/README.codex.md)
 
 ## Why a book
 
-Most dev best-practices resources read like committee-written documentation. They age into platitudes. The principles in this book have survived a hundred years precisely because they were never really about archery. They are about the mechanics of doing anything under pressure.
+Most dev best-practices resources age into committee language. The principles in this book survived because they are not really about archery. They are about the mechanics of doing anything under pressure.
 
-Claude Code is pressure. The cost of a bad prompt is tokens, but the deeper cost is the drift of your own attention — gripping the tool, forcing outputs, losing form. A CLAUDE.md can't fix that. But it can remind you what the form looks like.
+Claude Code is pressure. The cost of a bad prompt is tokens, but the deeper cost is drift: gripping the tool, forcing outputs, and losing form. A `CLAUDE.md` cannot fix that by itself. It can remind you what good form looks like.
 
 ## About the book
 
-*Zen in der Kunst des Bogenschiessens*, Eugen Herrigel, 1948. English translation by R. F. C. Hull, 1953, with a foreword by D. T. Suzuki. Herrigel was a German philosopher who spent six years in Japan in the 1920s and 30s studying kyūdō under Kenzō Awa. The book has been one of the best-selling Zen-adjacent works in the West for seventy years.
+*Zen in der Kunst des Bogenschiessens*, Eugen Herrigel, 1948. English translation by R. F. C. Hull, 1953, with a foreword by D. T. Suzuki. Herrigel was a German philosopher who spent six years in Japan in the 1920s and 30s studying kyudo under Kenzo Awa.
 
-It has also been contested. Shoji Yamada's *Shots in the Dark: Japan, Zen, and the West* (2009) argues that Herrigel projected a Zen framing onto a practice — Awa's Daishadōkyō school — that was not traditionally considered Zen in Japan. You should read Yamada if you want the full picture. The principles in this file do not depend on Herrigel's historical accuracy; they describe mechanics that every archer, Zen-framed or not, recognizes.
+It has also been contested. Shoji Yamada's *Shots in the Dark: Japan, Zen, and the West* (2009) argues that Herrigel projected a Zen framing onto a practice that was not traditionally considered Zen in Japan. You should read Yamada if you want the full picture. The principles in this repo do not depend on Herrigel being historically perfect; they depend on whether the mechanics help your workflow.
 
 ## Contributing
 
-Issues and PRs welcome. If a principle lands differently in your practice, tell me how. If you spot a place where the metaphor breaks, tell me that too — metaphors should survive contact with the real world or get dropped.
+Issues and PRs welcome. If a principle helps, say where. If it hurts, say where. If the metaphor breaks under real use, that is exactly the kind of feedback this repo should absorb.
 
 ## License
 
@@ -82,4 +168,4 @@ MIT — see [LICENSE](./LICENSE).
 
 Competitive archer from Northern Cyprus. Now a builder. Written with Claude Code.
 
-Format inspired by [`forrestchang/andrej-karpathy-skills`](https://github.com/forrestchang/andrej-karpathy-skills). Sister repo: [`Ege-Deniz/three-skills-for-claude`](https://github.com/Ege-Deniz/three-skills-for-claude).
+Sister repo: [`Ege-Deniz/three-skills-for-claude`](https://github.com/Ege-Deniz/three-skills-for-claude).
