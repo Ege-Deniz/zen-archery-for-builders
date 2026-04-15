@@ -2,7 +2,7 @@
 
 > *Zen in the Art of Archery* (Eugen Herrigel, 1948), reframed as a `CLAUDE.md` for working with AI.
 
-I grew up shooting competitive archery before I wrote code.
+I grew up as a competitive archer before I wrote code.
 
 In kyūdō — Japanese archery — there is a saying: **it shoots**. Not *I shoot*. When the archer's form is right, the arrow releases itself. The archer's job is not to hit the target. It is to disappear from the shot.
 
